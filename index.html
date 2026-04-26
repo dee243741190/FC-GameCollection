@@ -61,7 +61,7 @@
             margin: 10px;
             color: #fff;
             font-size: 10px;
-            transition: all 0.1s;
+            transition: all 0.1;
             cursor: pointer;
             pointer-events: auto;
             width: 340px;
@@ -95,7 +95,7 @@
         }
 
         .blink {
-            animation: blinker 1.5s linear infinite;
+            animation: blinker 1.5 linear infinite;
         }
 
         @keyframes blinker {
@@ -421,7 +421,7 @@
                 obsConfigs.forEach(config => {
                     const obsMesh = new THREE.Mesh(
                         new THREE.BoxGeometry(config.width, 0.8, 1),
-                        new THREE.MeshBasicMaterial({ color: 0xbbbbbb, emissive: 0xffffff, emissiveIntensity: 0.5 })
+                        new THREE.MeshBasicMaterial({ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: 0.5 })
                     );
                     obsMesh.position.set(0, config.y, 0);
                     obsMesh.userData = { speed: config.speed, limit: 12 };
